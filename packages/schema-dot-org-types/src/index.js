@@ -16,3 +16,4 @@ export {LiveBlogPosting} from './generated/live-blog-posting';
 export {Person} from "./generated/person";
 export {Organization} from "./generated/organization";
 export {ContactPoint} from "./generated/contact-point";
+export {Demand} from "./generated/demand";
