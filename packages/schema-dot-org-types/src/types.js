@@ -3,6 +3,7 @@
 export type {ThingType} from './generated/thing';
 export type {CreativeWorkType} from './generated/creative-work';
 export type {VideoObjectType} from './generated/video-object';
+export type {ArticleType} from './generated/article';
 export type {NewsArticleType} from './generated/news-article';
 export type {InteractionCounterType} from './generated/interaction-counter';
 export type {MediaObjectType} from './generated/media-object';
