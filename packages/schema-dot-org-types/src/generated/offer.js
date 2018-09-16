@@ -2,11 +2,10 @@
 import objectAssign from 'object-assign';
 import {Thing} from './thing';
 import type { ThingType } from './thing';
-import type { DateType } from '../types';
 import type { DeliveryMethodType } from '../types';
+import type { QuantitativeValueType } from '../types';
 import type { ProductType } from '../types';
 import type { ServiceType } from '../types';
-import type { QuantitativeValueType } from '../types';
 import type { TextType } from '../types';
 import type { ItemAvailabilityType } from '../types';
 import type { NumberType } from '../types';
@@ -18,41 +17,43 @@ import type { PlaceType } from '../types';
 import type { DateTimeType } from '../types';
 import type { GeoShapeType } from '../types';
 import type { PriceSpecificationType } from '../types';
+import type { DateType } from '../types';
 import type { BusinessFunctionType } from '../types';
 import type { AggregateRatingType } from '../types';
 import type { ReviewType } from '../types';
+import type { BusinessEntityTypeType } from '../types';
 import type { AdministrativeAreaType } from '../types';
 import type { OfferItemConditionType } from '../types';
 import type { WarrantyPromiseType } from '../types';
 import type { PhysicalActivityCategoryType } from '../types';
 import type { TypeAndQuantityNodeType } from '../types';
-import type { BusinessEntityTypeType } from '../types';
 export type OfferType = {
-    priceValidUntil?: DateType,
     availableDeliveryMethod?: DeliveryMethodType,
+    deliveryLeadTime?: QuantitativeValueType,
     itemOffered?: ProductType | ServiceType,
     eligibleQuantity?: QuantitativeValueType,
     serialNumber?: TextType,
     availability?: ItemAvailabilityType,
     eligibleDuration?: QuantitativeValueType,
-    price?: NumberType | TextType,
+    price?: TextType | NumberType,
     offeredBy?: OrganizationType | PersonType,
     acceptedPaymentMethod?: LoanOrCreditType | PaymentMethodType,
     seller?: OrganizationType | PersonType,
     availableAtOrFrom?: PlaceType,
     validFrom?: DateTimeType,
     mpn?: TextType,
-    eligibleRegion?: TextType | PlaceType | GeoShapeType,
+    eligibleRegion?: GeoShapeType | TextType | PlaceType,
     priceSpecification?: PriceSpecificationType,
-    deliveryLeadTime?: QuantitativeValueType,
+    priceValidUntil?: DateType,
     businessFunction?: BusinessFunctionType,
     aggregateRating?: AggregateRatingType,
     reviews?: ReviewType,
+    eligibleCustomerType?: BusinessEntityTypeType,
     sku?: TextType,
     eligibleTransactionVolume?: PriceSpecificationType,
     availabilityStarts?: DateTimeType,
-    areaServed?: GeoShapeType | TextType | AdministrativeAreaType | PlaceType,
-    ineligibleRegion?: PlaceType | GeoShapeType | TextType,
+    areaServed?: AdministrativeAreaType | TextType | PlaceType | GeoShapeType,
+    ineligibleRegion?: GeoShapeType | TextType | PlaceType,
     advanceBookingRequirement?: QuantitativeValueType,
     gtin12?: TextType,
     gtin13?: TextType,
@@ -62,41 +63,41 @@ export type OfferType = {
     availabilityEnds?: DateTimeType,
     itemCondition?: OfferItemConditionType,
     warranty?: WarrantyPromiseType,
-    category?: ThingType | TextType | PhysicalActivityCategoryType,
+    category?: ThingType | PhysicalActivityCategoryType | TextType,
     includesObject?: TypeAndQuantityNodeType,
     validThrough?: DateTimeType,
     addOn?: OfferType,
-    eligibleCustomerType?: BusinessEntityTypeType,
     gtin8?: TextType,
     inventoryLevel?: QuantitativeValueType,
     } & ThingType;
 
 export class Offer extends Thing {
-    priceValidUntil: DateType;
     availableDeliveryMethod: DeliveryMethodType;
+    deliveryLeadTime: QuantitativeValueType;
     itemOffered: ProductType | ServiceType;
     eligibleQuantity: QuantitativeValueType;
     serialNumber: TextType;
     availability: ItemAvailabilityType;
     eligibleDuration: QuantitativeValueType;
-    price: NumberType | TextType;
+    price: TextType | NumberType;
     offeredBy: OrganizationType | PersonType;
     acceptedPaymentMethod: LoanOrCreditType | PaymentMethodType;
     seller: OrganizationType | PersonType;
     availableAtOrFrom: PlaceType;
     validFrom: DateTimeType;
     mpn: TextType;
-    eligibleRegion: TextType | PlaceType | GeoShapeType;
+    eligibleRegion: GeoShapeType | TextType | PlaceType;
     priceSpecification: PriceSpecificationType;
-    deliveryLeadTime: QuantitativeValueType;
+    priceValidUntil: DateType;
     businessFunction: BusinessFunctionType;
     aggregateRating: AggregateRatingType;
     reviews: ReviewType;
+    eligibleCustomerType: BusinessEntityTypeType;
     sku: TextType;
     eligibleTransactionVolume: PriceSpecificationType;
     availabilityStarts: DateTimeType;
-    areaServed: GeoShapeType | TextType | AdministrativeAreaType | PlaceType;
-    ineligibleRegion: PlaceType | GeoShapeType | TextType;
+    areaServed: AdministrativeAreaType | TextType | PlaceType | GeoShapeType;
+    ineligibleRegion: GeoShapeType | TextType | PlaceType;
     advanceBookingRequirement: QuantitativeValueType;
     gtin12: TextType;
     gtin13: TextType;
@@ -106,11 +107,10 @@ export class Offer extends Thing {
     availabilityEnds: DateTimeType;
     itemCondition: OfferItemConditionType;
     warranty: WarrantyPromiseType;
-    category: ThingType | TextType | PhysicalActivityCategoryType;
+    category: ThingType | PhysicalActivityCategoryType | TextType;
     includesObject: TypeAndQuantityNodeType;
     validThrough: DateTimeType;
     addOn: OfferType;
-    eligibleCustomerType: BusinessEntityTypeType;
     gtin8: TextType;
     inventoryLevel: QuantitativeValueType;
 
