@@ -13,7 +13,7 @@
     "jsonld"
   ],
   "author": "Zillow (https://github.com/zillow)",
-  "repository": "https://github.com/zillow/schema-dot-org-markup",
+  "repository": "https://github.com/randytarampi/schema-dot-org-markup",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
