@@ -10,3 +10,4 @@ export {Product} from './generated/product';
 export {Offer} from './generated/offer';
 export {GeoCoordinates} from './generated/geo-coordinates';
 export {BreadcrumbList} from './shim/breadcrumb-list';
+export {SocialMediaPosting} from './generated/social-media-posting';
