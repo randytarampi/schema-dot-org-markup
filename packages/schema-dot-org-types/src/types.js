@@ -57,6 +57,8 @@ export type {ItemListType} from './generated/item-list';
 export type {BreadcrumbListType} from './shim/breadcrumb-list';
 export type {TripType} from './generated/trip';
 export type {SocialMediaPostingType} from './generated/social-media-posting';
+export type {BlogPostingType} from './generated/blog-posting';
+export type {LiveBlogPostingType} from './generated/live-blog-posting';
 
 import type moment from 'moment';
 
