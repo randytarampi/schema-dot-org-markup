@@ -145,4 +145,4 @@ import type {SocialMediaPostingType} from './generated/social-media-posting';
 export type DiscussionForumPosting = SocialMediaPostingType;
 
 import type {QuantitativeValueType} from "./generated/quantitative-value";
-export type Distance = QuantitativeValueType;
+export type DistanceType = QuantitativeValueType;
