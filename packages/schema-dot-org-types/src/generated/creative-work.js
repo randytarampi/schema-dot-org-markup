@@ -9,13 +9,14 @@ import type { URLType } from '../types';
 import type { OfferType } from '../types';
 import type { EventType } from '../types';
 import type { ProductType } from '../types';
-import type { PersonType } from '../types';
 import type { OrganizationType } from '../types';
+import type { PersonType } from '../types';
 import type { AudioObjectType } from '../types';
 import type { InteractionCounterType } from '../types';
+import type { RatingType } from '../types';
 import type { AlignmentObjectType } from '../types';
-import type { DateType } from '../types';
 import type { DateTimeType } from '../types';
+import type { DateType } from '../types';
 import type { PublicationEventType } from '../types';
 import type { AggregateRatingType } from '../types';
 import type { PlaceType } from '../types';
@@ -28,34 +29,32 @@ import type { CorrectionCommentType } from '../types';
 import type { AudienceType } from '../types';
 import type { ReviewType } from '../types';
 import type { CommentType } from '../types';
-import type { RatingType } from '../types';
 import type { VideoObjectType } from '../types';
 export type CreativeWorkType = {
     inLanguage?: LanguageType | TextType,
     copyrightYear?: NumberType,
-    publishingPrinciples?: CreativeWorkType | URLType,
+    publishingPrinciples?: URLType | CreativeWorkType,
     offers?: OfferType,
     recordedAt?: EventType,
-    material?: ProductType | TextType | URLType,
-    sdPublisher?: PersonType | OrganizationType,
+    material?: ProductType | URLType | TextType,
+    sdPublisher?: OrganizationType | PersonType,
     accessibilityAPI?: TextType,
     audio?: AudioObjectType,
     translator?: OrganizationType | PersonType,
     interactionStatistic?: InteractionCounterType,
-    fileFormat?: TextType | URLType,
+    contentRating?: TextType | RatingType,
     educationalAlignment?: AlignmentObjectType,
     learningResourceType?: TextType,
-    dateModified?: DateType | DateTimeType,
+    dateModified?: DateTimeType | DateType,
     sdLicense?: CreativeWorkType | URLType,
     releasedEvent?: PublicationEventType,
     aggregateRating?: AggregateRatingType,
     discussionUrl?: URLType,
-    citation?: TextType | CreativeWorkType,
+    citation?: CreativeWorkType | TextType,
     spatialCoverage?: PlaceType,
     character?: PersonType,
     datePublished?: DateType,
-    sponsor?: PersonType | OrganizationType,
-    keywords?: TextType,
+    sponsor?: OrganizationType | PersonType,
     encoding?: MediaObjectType,
     timeRequired?: DurationType,
     about?: ThingType,
@@ -63,7 +62,7 @@ export type CreativeWorkType = {
     workTranslation?: CreativeWorkType,
     commentCount?: IntegerType,
     isBasedOnUrl?: URLType | ProductType | CreativeWorkType,
-    temporalCoverage?: URLType | TextType | DateTimeType,
+    temporalCoverage?: DateTimeType | URLType | TextType,
     isFamilyFriendly?: BooleanType,
     license?: CreativeWorkType | URLType,
     associatedMedia?: MediaObjectType,
@@ -79,46 +78,47 @@ export type CreativeWorkType = {
     sdDatePublished?: DateType,
     accessibilitySummary?: TextType,
     dateCreated?: DateType | DateTimeType,
-    correction?: URLType | TextType | CorrectionCommentType,
+    correction?: CorrectionCommentType | URLType | TextType,
     translationOfWork?: CreativeWorkType,
     mainEntity?: ThingType,
     accessibilityFeature?: TextType,
     position?: IntegerType | TextType,
     exampleOfWork?: CreativeWorkType,
     audience?: AudienceType,
+    keywords?: TextType,
     typicalAgeRange?: TextType,
     contentLocation?: PlaceType,
-    producer?: OrganizationType | PersonType,
+    producer?: PersonType | OrganizationType,
     reviews?: ReviewType,
-    educationalUse?: TextType,
+    awards?: TextType,
     accessMode?: TextType,
     contentReferenceTime?: DateTimeType,
     publisherImprint?: OrganizationType,
     accessibilityHazard?: TextType,
     contributor?: PersonType | OrganizationType,
-    version?: TextType | NumberType,
-    provider?: PersonType | OrganizationType,
+    version?: NumberType | TextType,
+    provider?: OrganizationType | PersonType,
     publication?: PublicationEventType,
-    isPartOf?: TripType | CreativeWorkType,
+    isPartOf?: CreativeWorkType | TripType,
     funder?: PersonType | OrganizationType,
     accessibilityControl?: TextType,
     accountablePerson?: PersonType,
-    genre?: URLType | TextType,
+    genre?: TextType | URLType,
     thumbnailUrl?: URLType,
     isAccessibleForFree?: BooleanType,
-    awards?: TextType,
+    educationalUse?: TextType,
     comment?: CommentType,
-    publisher?: OrganizationType | PersonType,
-    expires?: DateType,
-    contentRating?: RatingType | TextType,
-    isBasedOn?: CreativeWorkType | URLType | ProductType,
+    publisher?: PersonType | OrganizationType,
+    encodings?: MediaObjectType,
+    fileFormat?: URLType | TextType,
+    isBasedOn?: ProductType | URLType | CreativeWorkType,
     workExample?: CreativeWorkType,
     author?: OrganizationType | PersonType,
     review?: ReviewType,
     schemaVersion?: URLType | TextType,
     video?: VideoObjectType,
     accessModeSufficient?: TextType,
-    encodings?: MediaObjectType,
+    expires?: DateType,
     interactivityType?: TextType,
     alternativeHeadline?: TextType,
     text?: TextType,
@@ -127,29 +127,28 @@ export type CreativeWorkType = {
 export class CreativeWork extends Thing {
     inLanguage: LanguageType | TextType;
     copyrightYear: NumberType;
-    publishingPrinciples: CreativeWorkType | URLType;
+    publishingPrinciples: URLType | CreativeWorkType;
     offers: OfferType;
     recordedAt: EventType;
-    material: ProductType | TextType | URLType;
-    sdPublisher: PersonType | OrganizationType;
+    material: ProductType | URLType | TextType;
+    sdPublisher: OrganizationType | PersonType;
     accessibilityAPI: TextType;
     audio: AudioObjectType;
     translator: OrganizationType | PersonType;
     interactionStatistic: InteractionCounterType;
-    fileFormat: TextType | URLType;
+    contentRating: TextType | RatingType;
     educationalAlignment: AlignmentObjectType;
     learningResourceType: TextType;
-    dateModified: DateType | DateTimeType;
+    dateModified: DateTimeType | DateType;
     sdLicense: CreativeWorkType | URLType;
     releasedEvent: PublicationEventType;
     aggregateRating: AggregateRatingType;
     discussionUrl: URLType;
-    citation: TextType | CreativeWorkType;
+    citation: CreativeWorkType | TextType;
     spatialCoverage: PlaceType;
     character: PersonType;
     datePublished: DateType;
-    sponsor: PersonType | OrganizationType;
-    keywords: TextType;
+    sponsor: OrganizationType | PersonType;
     encoding: MediaObjectType;
     timeRequired: DurationType;
     about: ThingType;
@@ -157,7 +156,7 @@ export class CreativeWork extends Thing {
     workTranslation: CreativeWorkType;
     commentCount: IntegerType;
     isBasedOnUrl: URLType | ProductType | CreativeWorkType;
-    temporalCoverage: URLType | TextType | DateTimeType;
+    temporalCoverage: DateTimeType | URLType | TextType;
     isFamilyFriendly: BooleanType;
     license: CreativeWorkType | URLType;
     associatedMedia: MediaObjectType;
@@ -173,46 +172,47 @@ export class CreativeWork extends Thing {
     sdDatePublished: DateType;
     accessibilitySummary: TextType;
     dateCreated: DateType | DateTimeType;
-    correction: URLType | TextType | CorrectionCommentType;
+    correction: CorrectionCommentType | URLType | TextType;
     translationOfWork: CreativeWorkType;
     mainEntity: ThingType;
     accessibilityFeature: TextType;
     position: IntegerType | TextType;
     exampleOfWork: CreativeWorkType;
     audience: AudienceType;
+    keywords: TextType;
     typicalAgeRange: TextType;
     contentLocation: PlaceType;
-    producer: OrganizationType | PersonType;
+    producer: PersonType | OrganizationType;
     reviews: ReviewType;
-    educationalUse: TextType;
+    awards: TextType;
     accessMode: TextType;
     contentReferenceTime: DateTimeType;
     publisherImprint: OrganizationType;
     accessibilityHazard: TextType;
     contributor: PersonType | OrganizationType;
-    version: TextType | NumberType;
-    provider: PersonType | OrganizationType;
+    version: NumberType | TextType;
+    provider: OrganizationType | PersonType;
     publication: PublicationEventType;
-    isPartOf: TripType | CreativeWorkType;
+    isPartOf: CreativeWorkType | TripType;
     funder: PersonType | OrganizationType;
     accessibilityControl: TextType;
     accountablePerson: PersonType;
-    genre: URLType | TextType;
+    genre: TextType | URLType;
     thumbnailUrl: URLType;
     isAccessibleForFree: BooleanType;
-    awards: TextType;
+    educationalUse: TextType;
     comment: CommentType;
-    publisher: OrganizationType | PersonType;
-    expires: DateType;
-    contentRating: RatingType | TextType;
-    isBasedOn: CreativeWorkType | URLType | ProductType;
+    publisher: PersonType | OrganizationType;
+    encodings: MediaObjectType;
+    fileFormat: URLType | TextType;
+    isBasedOn: ProductType | URLType | CreativeWorkType;
     workExample: CreativeWorkType;
     author: OrganizationType | PersonType;
     review: ReviewType;
     schemaVersion: URLType | TextType;
     video: VideoObjectType;
     accessModeSufficient: TextType;
-    encodings: MediaObjectType;
+    expires: DateType;
     interactivityType: TextType;
     alternativeHeadline: TextType;
     text: TextType;
