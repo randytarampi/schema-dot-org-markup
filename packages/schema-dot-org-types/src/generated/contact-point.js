@@ -1,5 +1,6 @@
 //@flow
 import objectAssign from 'object-assign';
+import {Thing} from './thing';
 import type { StructuredValueType } from '../types';
 import type { TextType } from '../types';
 import type { ContactPointOptionType } from '../types';
