@@ -119,6 +119,7 @@ export type DataDownloadType = MediaObjectType;
 
 import type {OrganizationType} from './generated/organization';
 export type EducationalOrganizationType = OrganizationType;
+export type MusicGroupType = OrganizationType;
 
 import type {ThingType} from './generated/thing';
 export type StructuredValueType = ThingType;
