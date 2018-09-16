@@ -18,3 +18,4 @@ export {Organization} from "./generated/organization";
 export {ContactPoint} from "./generated/contact-point";
 export {Demand} from "./generated/demand";
 export {MediaObject} from "./generated/media-object";
+export {ImageObject} from "./generated/image-object";
