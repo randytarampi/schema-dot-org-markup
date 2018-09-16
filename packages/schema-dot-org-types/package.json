@@ -1,6 +1,6 @@
 {
   "name": "@randy.tarampi/schema-dot-org-types",
-  "version": "0.1.11",
+  "version": "0.2.0-0",
   "publishConfig": {
     "access": "public"
   },
@@ -37,8 +37,8 @@
     "flow-copy-source": "^1.1.0",
     "load-json-file": "latest",
     "mocha": "^4.0.1",
-    "rollup": "^0.66.0",
     "request": "^2.81.0",
+    "rollup": "^0.66.0",
     "schema.org": "^3.1.0",
     "url-template": "^2.0.8"
   },
