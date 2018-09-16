@@ -65,6 +65,7 @@ export type {MonetaryAmountDistributionType} from './generated/monetary-amount-d
 export type {OccupationType} from './generated/occupation';
 export type {OwnershipInfoType} from './generated/ownership-info';
 export type {ProgramMembershipType} from './generated/program-membership';
+export type {ImageObjectType} from './generated/image-object';
 
 import type moment from 'moment';
 
@@ -77,7 +78,6 @@ export type URLType = URL;
 
 export type TextType = string;
 export type ActionType = string;
-export type ImageObjectType = string;
 export type PropertyValueType = string;
 export type NumberType = number;
 export type IntegerType = number;
