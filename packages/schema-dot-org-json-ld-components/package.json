@@ -4,9 +4,9 @@
   "description": "Components to generate schema.org json-ld markup.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./lib && babel src -d . && flow-copy-source src .",
+    "build": "rm -rf ./lib && npx babel src -d . && flow-copy-source src .",
     "prepare": "npm run build",
-    "test": "mocha --compilers js:babel-register"
+    "test": "npx mocha --compilers js:babel-register"
   },
   "keywords": [
     "schema.org",
@@ -21,6 +21,7 @@
   "repository": "https://github.com/zillow/schema-dot-org-markup",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-register": "^6.26.0",
     "flow-copy-source": "^1.2.0",
     "mocha": "^4.0.1",
@@ -31,5 +32,8 @@
   },
   "peerDependencies": {
     "react": "^15.6.2 || ^16.0.0"
+  },
+  "engines": {
+    "npm": ">=5.2"
   }
 }
