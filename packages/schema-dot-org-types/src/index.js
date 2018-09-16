@@ -13,3 +13,4 @@ export {BreadcrumbList} from './shim/breadcrumb-list';
 export {SocialMediaPosting} from './generated/social-media-posting';
 export {BlogPosting} from './generated/blog-posting';
 export {LiveBlogPosting} from './generated/live-blog-posting';
+export {Person} from "./generated/person";

@@ -2,41 +2,41 @@
 import objectAssign from 'object-assign';
 import {Context} from '../context';
 import type { ContextType } from '../context';
-import type { TextType } from '../types';
 import type { URLType } from '../types';
-import type { EventType } from '../types';
+import type { TextType } from '../types';
 import type { CreativeWorkType } from '../types';
-import type { PropertyValueType } from '../types';
+import type { EventType } from '../types';
 import type { ImageObjectType } from '../types';
+import type { PropertyValueType } from '../types';
 import type { ActionType } from '../types';
 export type ThingType = {
-    disambiguatingDescription?: TextType,
-    url?: URLType,
-    subjectOf?: EventType | CreativeWorkType,
-    identifier?: PropertyValueType | TextType | URLType,
-    name?: TextType,
     sameAs?: URLType,
     alternateName?: TextType,
-    mainEntityOfPage?: URLType | CreativeWorkType,
-    image?: URLType | ImageObjectType,
+    mainEntityOfPage?: CreativeWorkType | URLType,
+    subjectOf?: CreativeWorkType | EventType,
+    image?: ImageObjectType | URLType,
     description?: TextType,
+    identifier?: URLType | TextType | PropertyValueType,
+    name?: TextType,
     potentialAction?: ActionType,
     additionalType?: URLType,
+    disambiguatingDescription?: TextType,
+    url?: URLType,
     } & ContextType;
 
 export class Thing extends Context {
-    disambiguatingDescription: TextType;
-    url: URLType;
-    subjectOf: EventType | CreativeWorkType;
-    identifier: PropertyValueType | TextType | URLType;
-    name: TextType;
     sameAs: URLType;
     alternateName: TextType;
-    mainEntityOfPage: URLType | CreativeWorkType;
-    image: URLType | ImageObjectType;
+    mainEntityOfPage: CreativeWorkType | URLType;
+    subjectOf: CreativeWorkType | EventType;
+    image: ImageObjectType | URLType;
     description: TextType;
+    identifier: URLType | TextType | PropertyValueType;
+    name: TextType;
     potentialAction: ActionType;
     additionalType: URLType;
+    disambiguatingDescription: TextType;
+    url: URLType;
 
     constructor(props : ThingType) {
         super(props);

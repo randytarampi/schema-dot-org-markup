@@ -59,6 +59,11 @@ export type {TripType} from './generated/trip';
 export type {SocialMediaPostingType} from './generated/social-media-posting';
 export type {BlogPostingType} from './generated/blog-posting';
 export type {LiveBlogPostingType} from './generated/live-blog-posting';
+export type {DemandType} from './generated/demand';
+export type {MonetaryAmountDistributionType} from './generated/monetary-amount-distribution';
+export type {OccupationType} from './generated/occupation';
+export type {OwnershipInfoType} from './generated/ownership-info';
+export type {ProgramMembershipType} from './generated/program-membership';
 
 import type moment from 'moment';
 
@@ -137,3 +142,6 @@ export type OfferCatalogType = ItemListType;
 
 import type {SocialMediaPostingType} from './generated/social-media-posting';
 export type DiscussionForumPosting = SocialMediaPostingType;
+
+import type {QuantitativeValueType} from "./generated/quantitative-value";
+export type Distance = QuantitativeValueType;
