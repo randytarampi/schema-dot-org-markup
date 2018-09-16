@@ -1,6 +1,9 @@
 {
-  "name": "schema-dot-org-json-ld-components",
+  "name": "@randy.tarampi/schema-dot-org-json-ld-components",
   "version": "0.1.11",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Components to generate schema.org json-ld markup.",
   "main": "index.js",
   "scripts": {

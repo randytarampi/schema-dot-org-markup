@@ -1,6 +1,9 @@
 {
-  "name": "schema-dot-org-types",
+  "name": "@randy.tarampi/schema-dot-org-types",
   "version": "0.1.11",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Classes with flow types to encapsulate schema.org markup attributes.",
   "main": "index.js",
   "scripts": {
