@@ -6,9 +6,9 @@ import Adapter from 'enzyme-adapter-react-15';
 
 import {URL} from 'url';
 import React from 'react';
-import {VideoObject} from 'schema-dot-org-types';
-import {DEFAULT_CONTEXT} from 'schema-dot-org-types/lib/context';
-import type {VideoObjectType} from 'schema-dot-org-types/lib/types';
+import {VideoObject} from '@randy.tarampi/schema-dot-org-types';
+import {DEFAULT_CONTEXT} from '@randy.tarampi/schema-dot-org-types/lib/context';
+import type {VideoObjectType} from '@randy.tarampi/schema-dot-org-types/lib/types';
 
 import moment from 'moment';
 

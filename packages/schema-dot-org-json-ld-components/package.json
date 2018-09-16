@@ -24,11 +24,11 @@
   "repository": "https://github.com/randytarampi/schema-dot-org-markup",
   "license": "ISC",
   "devDependencies": {
+    "@randy.tarampi/schema-dot-org-types": "latest",
     "babel-cli": "^6.26.0",
     "babel-register": "^6.26.0",
     "flow-copy-source": "^1.2.0",
-    "mocha": "^4.0.1",
-    "schema-dot-org-types": "^0.1.11"
+    "mocha": "^4.0.1"
   },
   "dependencies": {
     "moment": "^2.18.1"
