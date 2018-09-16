@@ -54,7 +54,9 @@ export type {BrandType} from './generated/brand';
 export type {ListItemType} from './generated/list-item'
 export type {SingleFamilyResidenceType} from './generated/single-family-residence';
 export type {ItemListType} from './generated/item-list';
-export type {BreadcrumbListType} from './shim/breadcrumb-list'
+export type {BreadcrumbListType} from './shim/breadcrumb-list';
+export type {TripType} from './generated/trip';
+export type {SocialMediaPostingType} from './generated/social-media-posting';
 
 import type moment from 'moment';
 
@@ -126,6 +128,10 @@ export type WarrantyScopeType = WarrantyScopeType;
 
 import type {CommentType} from './generated/comment';
 export type AnswerType = CommentType;
+export type CorrectionCommentType = CommentType;
 
 import type {ItemListType} from './generated/item-list';
 export type OfferCatalogType = ItemListType;
+
+import type {SocialMediaPostingType} from './generated/social-media-posting';
+export type DiscussionForumPosting = SocialMediaPostingType;
